@@ -284,7 +284,7 @@
             const originalBtnText = submitBtn.innerHTML;
 
             // Google Apps Script Web App URL - REPLACE WITH YOUR DEPLOYED URL
-            const APPS_SCRIPT_URL = 'https://script.google.com/macros/s/AKfycbz304w6vvgiOw3T3fCEz0amsntUTBm_CvuVniEnGntjSvmFyvyzUcBkoqUZ3a4NGtb6/exec';
+            const APPS_SCRIPT_URL = 'https://script.google.com/macros/s/AKfycbxiwmdDpUrgwYDCJ0Q49d-DLCwVv6M0-3mWu_9TaAIz7bNQaTpdkuofon9UFwODjFwP/exec';
 
             // Handle form submission
             async function handleSubmit(event) {
@@ -313,7 +313,7 @@
                     // Send data using fetch with no-cors mode
                     const response = await fetch(APPS_SCRIPT_URL, {
                         method: 'POST',
-                        mode: 'no-cors', // This bypasses CORS but you won't get a readable response
+                        mode: 'cors', // This bypasses CORS but you won't get a readable response
                         headers: {
                             'Content-Type': 'application/x-www-form-urlencoded',
                         },
@@ -453,4 +453,7 @@
         </script>
     </body>
 
+
 </html>
+
+
