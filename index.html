@@ -313,7 +313,7 @@
                     // Send data using fetch with no-cors mode
                     const response = await fetch(APPS_SCRIPT_URL, {
                         method: 'POST',
-                        mode: 'no-cors', // This bypasses CORS but you won't get a readable response
+                        mode: 'cors', // This bypasses CORS but you won't get a readable response
                         headers: {
                             'Content-Type': 'application/x-www-form-urlencoded',
                         },
@@ -455,3 +455,4 @@
 
 
 </html>
+
